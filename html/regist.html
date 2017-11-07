@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <title>xxx入住申请</title>
+    <link rel="icon" href="../img/favicon.png" type="image/x-icon"/>
+    <link rel="stylesheet" href="../css/font-awesome.css"/>
+    <link rel="stylesheet" href="../css/bootstrap.css"/>
+    <link rel="stylesheet" href="../css/regist.css"/>
+</head>
+<body>
+<header class="header">
+    <div>
+        <span>xxx入住</span>
+        <a href="#" title="点击查看入住帮助" class="help-link"><i class="fa fa-question-circle"></i> 入住帮助</a>
+    </div>
+</header>
+<nav class="nav-step">
+    <ul id="steps" class="steps">
+        <li><a href="javascript:;">1<span class="gap"></span>入住须知</a></li>
+        <li class="current"><a href="javascript:;">2<span class="gap"></span>公司信息提交</a></li>
+        <li id="audit-step"><a href="javascript:;">3<span class="gap"></span>等待审核</a></li>
+        <li><a href="javascript:;">4<span class="gap"></span>合同签订</a></li>
+    </ul>
+</nav>
+<div id="step-content" class="step-content">
+    <div class="step-pane active">
+        <header>公司资质信息</header>
+        <div class="appForm-wrap">
+            <form class="form-horizontal appForm" data-mode="1">
+                <fieldset>
+                    <legend>营业执照信息（副本）</legend>
+                    <div class="holy-layout-am appForm-group clearfix">
+                        <label class="holy-layout-al">公司名称</label>
+
+                        <div class="holy-layout-m">
+                            <input name="companyName"
+                                   class="form-control form-field"
+                                   data-type="text"
+                                   data-default-value=""
+                                   type="text">
+                        </div>
+                    </div>
+                    <div class="holy-layout-am appForm-group appForm-group-img-upload clearfix">
+                        <label class="holy-layout-al">法人身份证电子版</label>
+
+                        <div class="holy-layout-m">
+                            <input id="legalPersonIDPic-input" name="legalPersonIDPic"
+                                   class="form-control form-field" type="hidden">
+                            <ul id="legalPersonIDPic-view" class="image-upload-view clearfix">
+                            </ul>
+                            <p class="img-upload-msg">
+                                请确保图片清晰，文字可辨
+                                <a href="#" title="查看示例"><i class="fa fa-question-circle"></i> 查看示例</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="holy-layout-am appForm-group clearfix">
+                        <label class="holy-layout-al">营业执照详细地址</label>
+
+                        <div class="holy-layout-m">
+                            <input name="licenseDetailAddr"
+                                   class="form-control form-field"
+                                   data-type="text"
+                                   data-default-value=""
+                                   type="text">
+                        </div>
+                    </div>
+                    <div class="holy-layout-am appForm-group clearfix">
+                        <label class="holy-layout-al">成立日期</label>
+
+                        <div class="holy-layout-m">
+                            <div class="form_date form-field"
+                                 data-name="registerDate"
+                                 data-type="date"
+                                 data-default-value=""
+                                 data-value=""
+                                 data-format="yyyy-MM-dd">
+                                <input readonly type="text" class="form-control form_date_input">
+                                <span class="form_date_addon"><i class="fa fa-calendar"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="holy-layout-am appForm-group clearfix">
+                        <label class="holy-layout-al">营业期限</label>
+
+                        <div class="holy-layout-m clearfix business-time">
+                            <div class="form_date-group cleafix pull-left">
+                                <div class="form_date form-field"
+                                     data-name="businessBeginTime"
+                                     data-type="date"
+                                     data-default-value=""
+                                     data-value=""
+                                     data-format="yyyy-MM-dd">
+                                    <input readonly type="text" class="form-control form_date_input">
+                                    <span class="form_date_addon"><i class="fa fa-calendar"></i></span>
+                                </div>
+                                <span class="form_date-gap">—</span>
+
+                                <div class="form_date form-field"
+                                     data-name="businessEndTime"
+                                     data-type="date"
+                                     data-default-value=""
+                                     data-value=""
+                                     data-format="yyyy-MM-dd">
+                                    <input readonly type="text" class="form-control form_date_input">
+                                    <span class="form_date_addon"><i class="fa fa-calendar"></i></span>
+                                </div>
+                            </div>
+                            <div class="checkbox-container form-field"
+                                 data-name="isPermanent"
+                                 data-type="checkbox"
+                                 data-default-value=""
+                                 data-value="">
+                                <label class="radio-inline">
+                                    <span class="checkbox-wrap"><input type="checkbox" value="true"><i
+                                            class="fa"></i></span>永久
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="holy-layout-am appForm-group clearfix">
+                        <label class="holy-layout-al">注册资本</label>
+
+                        <div class="holy-layout-m">
+                            <input name="registeredCapital"
+                                   class="form-control form-field"
+                                   data-type="text"
+                                   data-default-value=""
+                                   type="text">
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="../js/lib/sea.js"></script>
+<script src="../js/common.js"></script>
+<script>
+    seajs.use('app/regist');
+</script>
+</body>
+</html>
